@@ -20,18 +20,26 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 html, body {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-family: sans-serif;
     font-size: 16px;
+    background-color: #ECECEC;
 }
 
 h1{
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
 }
 
 figure,img {
   /* Sets image width to match parent */
   width: 100%;
   display: block;
+  border-radius: 30px;
   margin: 0 auto;
+}
+
+footer{
+    font-style:italic;
 }
 
 p {
@@ -56,30 +64,31 @@ p {
     max-width: 1200px;
     padding: 0;
   }
-  
+
   .container.image .caption,
   .container.image figcaption {
     padding: 5px 10px;
   }
   
-  .desktop {
-    display: none;
-  }
-  
-  .mobile {
-    display: block;
-  }
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
     .collage{
         display: flex;
         justify-content: space-between;
       }
-}
+    
+    .collage > div {
+        flex-basis: 30%;
+      }
+
+    .container.image.small{
+    width: 70%;
+    }
 
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
