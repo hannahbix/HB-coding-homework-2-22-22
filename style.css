@@ -23,12 +23,62 @@ html, body {
     font-size: 16px;
 }
 
+h1{
+    font-size: 30px;
+}
+
+figure,img {
+  /* Sets image width to match parent */
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+    line-height: 1.2em;
+  }
+
+  .caption, figcaption {
+    font-size: 1ox;
+    padding: 5px 0;
+  }
+  /** BASE CLASSES */
+  /** Container styles to keep content from becoming too wide or coming too close to
+  * mobile edge */
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  /** Images are allowed to be a little wider when broken out into their own container */
+  .container.image {
+    max-width: 1200px;
+    padding: 0;
+  }
+  
+  .container.image .caption,
+  .container.image figcaption {
+    padding: 5px 10px;
+  }
+  
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    display: block;
+  }
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .collage{
+        display: flex;
+        justify-content: space-between;
+      }
 }
 
 /*********************************************************************
